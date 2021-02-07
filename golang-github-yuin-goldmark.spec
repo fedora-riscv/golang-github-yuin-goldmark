@@ -2,7 +2,7 @@
 
 # https://github.com/yuin/goldmark
 %global goipath         github.com/yuin/goldmark
-Version:                1.3.1
+Version:                1.3.2
 
 %gometa
 
@@ -14,7 +14,7 @@ compliant, well structured.}
 %global godocs          README.md
 
 Name:           %{goname}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Markdown parser written in Go
 
 License:        MIT
@@ -40,6 +40,9 @@ Source0:        %{gosource}
 %gopkgfiles
 
 %changelog
+* Sun Feb 07 2021 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.3.2-1
+- Update to latest version (#1925924)
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.3.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
