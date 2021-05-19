@@ -2,7 +2,7 @@
 
 # https://github.com/yuin/goldmark
 %global goipath         github.com/yuin/goldmark
-Version:                1.3.6
+Version:                1.3.7
 
 %gometa
 
@@ -40,6 +40,9 @@ Source0:        %{gosource}
 %gopkgfiles
 
 %changelog
+* Wed May 19 2021 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.3.7-1
+- Update to latest version (#1961450)
+
 * Sun May 16 2021 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.3.6-1
 - Update to latest version (#1960862)
 
