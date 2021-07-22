@@ -14,7 +14,7 @@ compliant, well structured.}
 %global godocs          README.md
 
 Name:           %{goname}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Markdown parser written in Go
 
 License:        MIT
@@ -40,6 +40,9 @@ Source0:        %{gosource}
 %gopkgfiles
 
 %changelog
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.4.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sun Jul 11 2021 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.4.0-1
 - Update to latest version (#1976934)
 
