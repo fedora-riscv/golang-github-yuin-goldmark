@@ -1,15 +1,15 @@
-From 955788e659a384385759cd1e0b7da262842317a8 Mon Sep 17 00:00:00 2001
+From 353d9853f979be378f33551a2a6c66fc9df49716 Mon Sep 17 00:00:00 2001
 From: Elliott Sales de Andrade <quantum.analyst@gmail.com>
 Date: Sat, 5 Mar 2022 18:15:23 -0500
 Subject: [PATCH] Increase timeout for 32-bit builds
 
 Signed-off-by: Elliott Sales de Andrade <quantum.analyst@gmail.com>
 ---
- extra_test.go | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)
+ extra_test.go | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/extra_test.go b/extra_test.go
-index 211ba2b..1bf56a6 100644
+index 211ba2b..9234137 100644
 --- a/extra_test.go
 +++ b/extra_test.go
 @@ -122,8 +122,8 @@ func TestManyProcessingInstructionPerformance(t *testing.T) {
@@ -29,8 +29,19 @@ index 211ba2b..1bf56a6 100644
  	finished := nowMillis()
 -	if (finished - started) > 5000 {
 -		t.Error("Parsing processing instructions took more 5 secs")
-+	if (finished - started) > 10000 {
-+		t.Error("Parsing processing instructions took more 10 secs")
++	if (finished - started) > 30000 {
++		t.Error("Parsing processing instructions took more 30 secs")
+ 	}
+ }
+ 
+@@ -156,8 +156,8 @@ func TestManyDeclPerformance(t *testing.T) {
+ 	var b bytes.Buffer
+ 	_ = markdown.Convert(source, &b)
+ 	finished := nowMillis()
+-	if (finished - started) > 5000 {
+-		t.Error("Parsing processing instructions took more 5 secs")
++	if (finished - started) > 15000 {
++		t.Error("Parsing processing instructions took more 15 secs")
  	}
  }
  
