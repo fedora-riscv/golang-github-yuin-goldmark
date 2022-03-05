@@ -16,6 +16,7 @@ compliant, well structured.}
 Name:           %{goname}
 Release:        %autorelease
 Summary:        Markdown parser written in Go
+Patch0001:      0001-Increase-timeout-for-32-bit-builds.patch
 
 License:        MIT
 URL:            %{gourl}
@@ -28,6 +29,7 @@ Source0:        %{gosource}
 
 %prep
 %goprep
+%autopatch -p1
 
 %install
 %gopkginstall
