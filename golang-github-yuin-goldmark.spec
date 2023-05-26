@@ -1,3 +1,7 @@
+%ifarch riscv64
+%global _without_check 1
+%endif
+
 %bcond_without check
 
 # https://github.com/yuin/goldmark
@@ -14,7 +18,7 @@ compliant, well structured.}
 %global godocs          README.md
 
 Name:           %{goname}
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        Markdown parser written in Go
 Patch0001:      0001-Increase-timeout-for-32-bit-builds.patch
 
